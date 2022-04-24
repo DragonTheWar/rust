@@ -2,12 +2,8 @@ use std::io;
 use figlet_rs::FIGfont;
 use rust::{self, Summary, Tweet};
 fn main(){
-    let shadow_font = FIGfont::from_file("resources/shadow.flf");
-    let shadow_font = match shadow_font {
-        Ok(font) => font,
-        Err(_) => panic!("Not found font"),
-    };
-        
+    let shadow_font = FIGfont::from_file("resources/shadow.flf")
+        .expect("not found");        
     let figure = shadow_font.convert("Dragon-script");
     assert!(figure.is_some());
 
