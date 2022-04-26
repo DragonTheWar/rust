@@ -6,7 +6,7 @@ fn main(){
         .expect("not found");        
     let figure = shadow_font.convert("Dragon-script");
     assert!(figure.is_some());
-
+    
     println!("{}", figure.unwrap());
     println!("");
     println!("1) Linux");
