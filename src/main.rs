@@ -11,6 +11,7 @@ fn main(){
     println!("");
     println!("1) Linux");
     println!("2) Windows");
+    println!("3) Выйти");
     println!("Выберите опцию: ");
     let mut option = String::new();
     io::stdin()
@@ -23,6 +24,7 @@ fn main(){
     match option {  
         1 => linux(),
         2 => windows(),
+        3 => (), 
         _ => main(),
     }
 }
